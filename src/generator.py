@@ -23,8 +23,8 @@ def generate_sensor_data(duration=100, sampling_rate=10):
 
   #3. THE NOISE
   # Random noise to simulate sensor inaccuracies
-  # Gaussian noise with mean = 0 and standard deviation = 1.5 degrees
-  noise = np.random.normal(0, 1.5, size=len(time))
+  # Gaussian noise with mean = 0 and standard deviation = 0.6 degrees
+  noise = np.random.normal(0, 0.6, size=len(time))
 
   #4. THE SENSOR READING
   # Signal + Noise = What we actually see on the monitor
@@ -32,7 +32,7 @@ def generate_sensor_data(duration=100, sampling_rate=10):
 
   return time, base_signal, sensor_data
 
-# This block only runs if I execute this file directly (for testing)
+# This block only runs if this file is executed directly (for testing)
 if __name__ == "__main__":
     print("--- Testing Generator Module ---")
     t, s, d = generate_sensor_data()
