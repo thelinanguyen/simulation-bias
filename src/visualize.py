@@ -26,3 +26,6 @@ def plot_sensor_data(time, signal, noisy_reading):
   plt.legend()
   plt.grid(True, alpha=0.3)
   plt.show()
+  
+  
+  
